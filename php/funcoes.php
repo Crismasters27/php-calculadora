@@ -34,22 +34,26 @@
             public function somar(){
                 //Usando a função SET
                 $this->resultado = $this->num1 + $this->num2;
+                return "<br>A soma do $this->num1 e do $this->num2 é: $this->resultado<br>";
             }//fim do método somar
 
             public function subtrair (){
                 $this->resultado = $this->num1 - $this->num2;
+                return "<br>A subtração do $this->num1 e do $this->num2 é: $this->resultado<br>";
             }//fim do método subtrair
 
             public function multiplicar (){
                 $this->resultado = $this->num1 * $this->num2;
+                return "<br>A multiplicação do $this->num1 e do $this->num2 é: $this->resultado<br>";
             }//fim do método multiplicar
 
             public function dividir (){
                 if ($this->num2 <= 0){
-                    $this->resultado = "Impossível dividir por zero!";
+                    return "Impossível dividir por zero";
                 }else{
-                    $this->resultado = $this->num1 / $this->num1 / $this->num2;
+                    $this->resultado = $this->num1 / $this->num2;
                 }
+                return "<br>A divisão do $this->num1 e do $this->num2 é: $this->resultado<br>";
             }//fim do dividir
 
         }//fim do construtor
