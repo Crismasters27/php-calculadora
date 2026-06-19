@@ -16,6 +16,8 @@
     <a href="telas/subtrair.php" class="btn btn-primary">Subtrair</a>
     <a href="telas/multiplicar.php" class="btn btn-primary">Multiplicar</a>
     <a href="telas/dividir.php" class="btn btn-primary">Dividir</a>
+    <a href="telas/bhaskara.php" class="btn btn-primary">Bhaskara</a>
+    <a href="telas/imc.php" class="btn btn-primary">IMC</a>
     
 </body>
 </html>
