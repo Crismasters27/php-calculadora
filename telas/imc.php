@@ -29,10 +29,10 @@
         <button type="submit" class="btn btn-primary">Calcular
             <?php
                 if(isset($_POST['peso']) || isset($_POST['altura'])){
-                    $peso = (float)$_POST['peso'];
-                    $altura = (float)$_POST['altura'];
+                    $peso = $_POST['peso'];
+                    $altura = $_POST['altura'];
                     //Chamo a variável que representa a classe Funcao
-                    $resultado = $funcao->imc($peso, $altura);
+                    $resultado = $funcao->calcularImc($peso, $altura);
                 }                
 
             ?>

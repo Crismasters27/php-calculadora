@@ -18,6 +18,14 @@
     <a href="telas/dividir.php" class="btn btn-primary">Dividir</a>
     <a href="telas/bhaskara.php" class="btn btn-primary">Bhaskara</a>
     <a href="telas/imc.php" class="btn btn-primary">IMC</a>
+    <a href="telas/retangulo.php" class="btn btn-primary">Area do Retangulo</a>
+    <a href="telas/triangulo.php" class="btn btn-primary">Area do Triangulo</a>
+    <a href="telas/preco.php" class="btn btn-primary">Preço com Imposto</a>
+    <a href="telas/idade.php" class="btn btn-primary">Idade para dias</a>
+    <a href="telas/leiaDoisNumerosExibaSoma.php" class="btn btn-primary">Leia 2 números e exiba a soma</a>
+    <a href="telas/idade.php" class="btn btn-primary">Idade para dias</a>
+    <a href="telas/idade.php" class="btn btn-primary">Idade para dias</a>
+
     
 </body>
 </html>

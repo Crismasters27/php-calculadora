@@ -70,19 +70,77 @@
             }//fim do bhaskara
 
             //Fórmula IMC
-            public function imc(float $peso, float $altura){
-                $resultado = $peso / ($altura * $altura);
-            if($resultado <= 0){
-                return "Impossível um número 0 ou negativo: $resultado";
-            }else{
-                return "<br>O resultado do IMC é: $resultado";
-            }
-            }//fim do IMC
+            public function calcularImc(float $peso, float $altura){
+                $imc = 0;//Instanciando a variável
+                if($peso <= 0  || $altura <= 0){
+                    return "Pesou ou altura não estão corretos, informe um valor maior que zero!";
+                }else{
+                    $imc = $peso / ($altura^2);
+                    if($imc <= 18.5){
+                        return "Abaixo do peso normal, seu IMC é: ".$imc;
+                    }else if ($imc > 18.5 && $imc <= 24.9){
+                        return "Peso normal, seu IMC é: ".$imc;
+                    }else if ($imc > 24.9 && $imc <= 29.9){
+                        return "Excesso de peso, seu IMC é: ".$imc;
+                    }else if ($imc > 29.9 && $imc <= 34.9){
+                        return "Obesidade classe I ".$imc;
+                    }else{
+                        return "Obesidade classe II ".$imc;
+                    }//fim do if de classificação
+                    }//fim do if... else de validação
+                }//fim do método
 
             //Área do retângulo
-            public function retangulo(){
-                
+            public function retangulo(float $base, float $altura){
+                $area = $base * $altura;
+                if($area <=0){
+                    return "Impossível ter uma área menor ou igual a 0";
+                }else{
+                    return "A área do retângulo é: $area";
+                }
+            }//fim do retangulo
+
+            //Área do triângulo
+            public function triangulo(float $base, $altura){
+                $area = ($base * $altura)/2;
+            if($area <= 0){
+                return "Impossível ter uma área menor ou igual a zero!";
+            }else{
+                return "A área do triângulo é: $area";
             }
+        }//fim do triangulo
+
+        //Preço com 18% de imposto
+        public function preco(float $precoProduto){
+            $valor = ($precoProduto * 0.18) + $precoProduto;
+        if($precoProduto <= 0){
+            return "Erro, preço do produto precisa ser positivo";
+        }else{
+            return "O preço do produto é: $valor";
+        }
+        }//fim do preco
+
+        //Leia a idade e converta para dias
+        public function idade(int $idade){
+            $dias = $idade * 365;
+        if($idade <= 0){
+            return "Não existe como converter para dias uma idade com valor menor ou igual a zero!";
+        }else{
+            return "O valor convertido da idade para dias é: $dias";
+        }
+        }//fim da idade
+
+        //Leia dois números e exiba a soma
+        public function somarDoisNumeros(){
+            $this->resultado = $this->num1 + $this->num2;
+            return "<br>A soma do $this->num1 e do $this->num2 é: $this->resultado<br>";
+        }//fim do método somar
+
+        //Leia um número e exiba o dobro
+        public function dobroDoisNumeros(int $num1){
+            $resultado = $num1 * 2;
+            return "O resultado do dobro do número é: $resultado";
+        }
 
         }//fim da classe função
 ?><!-- Fechamento da TAG PHP -->

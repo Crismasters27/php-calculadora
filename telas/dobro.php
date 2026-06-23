@@ -10,29 +10,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Área do Triângulo</title>
+    <title>Dobro</title>
 </head>
 <body style="background-color:#ff00aa;">
     <form method="POST" style="text-align:center;margin:10%;background-color:#2aff00;padding:5%;">
-        <H1>Área do Triângulo</H1>
+        <H1>Dobro</H1>
 
         <div class="mb-3">
-            <label for="lPrimeiroNumero" class="form-label">Informe a base: </label>
-            <input type="text" class="form-control" id="base" name="base">
+            <label for="lPrimeiroNumero" class="form-label">Informe o número para exibir o dobro: </label>
+            <input type="number" class="form-control" id="num1" name="num1">
         </div>
 
         <div class="mb-3">
-            <label for="lSegundoNumero" class="form-label">Informe a altura: </label>
-            <input type="text" class="form-control" id="altura" name="altura">
+            <label for="lSegundoNumero" class="form-label">Informe o segundo número: </label>
+            <input type="number" class="form-control" id="exampleFormControlInput1" name="segundoNumero">
         </div>
 
-        <button type="submit" class="btn btn-primary">Calcular
+        <button type="submit" class="btn btn-primary">Subtrair
             <?php
-                if(isset($_POST['base']) || isset($_POST['altura'])){
-                    $base = $_POST['base'];
-                    $altura = $_POST['altura'];
+                if(isset($_POST['primeiroNumero']) || isset($_POST['segundoNumero'])){
+                    $num1 = $_POST['primeiroNumero'];
+                    $num2 = $_POST['segundoNumero'];
                     //Chamo a variável que representa a classe Funcao
-                    $area = $funcao->triangulo($base, $altura);
+                    $funcao->coletar($num1, $num2);
                 }                
 
             ?>
@@ -40,8 +40,8 @@
 
         <h2>
         <?php
-            if(isset($_POST['base']) || isset($_POST['altura'])){
-                echo $area;               
+            if(isset($_POST['primeiroNumero']) || isset($_POST['segundoNumero'])){
+                echo $funcao->subtrair();              
             }else{
                 echo "Preencha os campos!";
             }
