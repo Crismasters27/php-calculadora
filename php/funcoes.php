@@ -140,6 +140,54 @@
         public function dobroDoisNumeros(int $num1){
             $resultado = $num1 * 2;
             return "O resultado do dobro do número é: $resultado";
+        }//fim do método dobro
+
+        //Média de três números
+        public function mediaTres(int $num1, int $num2, int $num3){
+            $resultado = ($num1 + $num2 + $num3) / 3;
+            return "<br>A média é: $resultado";
+        }//fim do método média
+
+        //Raiz quadrada
+        public function raiz(float $numero){
+            $resultado = sqrt($numero);
+            return "<br>A raiz quadrada é: $resultado";
+        }//fim do método raiz quadrada
+
+        public function centimetros(float $metros){
+            $resultado = $metros * 100;
+            return "<br>Em centímetros: $resultado";
+        }//fim do método metros para centímetros
+
+        public function circulo(float $raio){
+            $resultado = pi() * pow($raio,2);
+            return "<br>A área do círculo é: $resultado";
+        }//fim da área do círculo
+
+        public function fahrenheit(float $celsius){
+            $resultado = ($celsius * 9/5) + 32;
+            return "<br>Fahrenheit: $resultado";
+        }//fim do fahrenheit
+
+        public function desconto(float $preco){
+            $resultado = $preco - ($preco * 10/100);
+            return "<br>Preço com desconto: R$ $resultado";
+        }//fim do desconto
+
+        public function idadeMeses(int $idade){
+            $resultado = $idade * 12;
+            return "<br>Idade em meses: $resultado";
+        }//fim do Idade para Meses
+
+        //Método do par ou ímpar
+        public function parImpar(int $numero){
+            $resultado = ($numero % 2);
+            return ["Par","Ímpar"][$resultado];
+        }//fim do par ou ímpar
+
+        //Recebendo um número e calcule seu quadrado ou cubo
+        public function quadradoECubo(int $num1, int $num2){
+            return "O resultado do "
         }
 
         }//fim da classe função

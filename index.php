@@ -23,8 +23,8 @@
     <a href="telas/preco.php" class="btn btn-primary">Preço com Imposto</a>
     <a href="telas/idade.php" class="btn btn-primary">Idade para dias</a>
     <a href="telas/leiaDoisNumerosExibaSoma.php" class="btn btn-primary">Leia 2 números e exiba a soma</a>
-    <a href="telas/idade.php" class="btn btn-primary">Idade para dias</a>
-    <a href="telas/idade.php" class="btn btn-primary">Idade para dias</a>
+    <a href="telas/dobro.php" class="btn btn-primary">Dobro do número</a>
+    <a href="telas/media.php" class="btn btn-primary">Média dos três números</a>
 
     
 </body>
