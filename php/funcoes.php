@@ -185,10 +185,61 @@
             return ["Par","Ímpar"][$resultado];
         }//fim do par ou ímpar
 
-        //Recebendo um número e calcule seu quadrado ou cubo
-        public function quadradoECubo(int $num1, int $num2){
-            return "O resultado do "
+        //Volume da caixa
+        public function caixa(float $comprimento, float $largura, float $altura){
+            $volume = $comprimento * $largura * $altura;
+        if($volume <= 0){
+            return "Impossível calcular um volume menor ou igual a zero!";
+        }else{
+            return "O volume da caixa é: $volume";
         }
+        }//fim da caixa
+
+        //Recebendo um número e calcule seu quadrado e cubo
+        public function quadradoECubo(int $numero){
+            $quadrado = pow($numero,2);
+            $cubo = pow($numero,3);
+            return "O quadrado é: $quadrado <br>O cubo é: $cubo";
+        }//fim do método quadrado e cubo
+
+        //Velocidade média
+        public function velocidadeMedia(float $distancia, float $tempo){
+            $velocidade = $distancia / $tempo;
+        if($tempo <= 0){
+            return "O tempo deve ser maior que zero!";
+        }else{
+            return "A velocidade média é: $velocidade";
+        }
+        }//fim da velocidade média
+
+        //Média aritmética
+        public function mediaAritmetica(float $num1, float $num2){
+            $resultado = ($num1 + $num2) / 2;
+            return "A média aritmética é: $resultado";
+        }//fim da média aritmética
+
+        //Salário mensal
+            public function salario(float $valorHora, float $horas){
+            $salario = $valorHora * $horas;
+            return "O salário mensal é: R$ $salario";
+        }//fim do salário
+
+        //Tempo restante de vida
+        public function tempoVida(int $idade){
+            $resultado = 100 - $idade;
+        if($idade >= 100){
+            return "A pessoa já possui 100 anos ou mais.";
+        }else{
+            return "Faltam $resultado anos para completar 100 anos.";
+        }
+        }//fim do tempo restante
+
+        //Soma e média
+        public function somaMedia(float $num1, float $num2, float $num3){
+            $soma = $num1 + $num2 + $num3;
+            $media = $soma / 3;
+            return "A soma é: $soma <br>A média é: $media";
+        }//fim da soma e média
 
         }//fim da classe função
 ?><!-- Fechamento da TAG PHP -->
